@@ -10,9 +10,15 @@ class TestScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final testController = TextEditingController();
     return (Scaffold(
         appBar: AppBar(title: const Text("Test screen")),
-        body: Center(child: CustomEntryField())));
+        body: Center(
+            child: CustomEntryField(
+          controller: testController,
+          hint: "Test hint",
+          isPassword: false,
+        ))));
   }
 }
 
